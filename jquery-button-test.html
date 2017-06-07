@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <!--Google CDN hosted Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+      body {display:flex;}
+      .left, .right {width: 50%;}
+      .left {display:flex; flex-direction: column}
+      .right {text-align: center;}
+  </style>
+  </head>
+  <body>
+
+      <!--Buttons-->
+      <div class="left">
+          <button id="bus1">Awapuni</button>
+          <button id="bus2">Rhodes</button>
+          <button id="bus3">Brightwater</button>
+      </div>
+
+      <!--Content-->
+      <div class="right">
+        <div class="content"></div>
+      </div>
+
+	  <script src="bus-stops-and-times-final.js"></script>
+	  <script>
+
+		  function = Bus (name, colour, busStops, busTimesMonFri) {
+			  this.name = name;
+			  this.colour = colour;
+			  this.busStops = busStops;
+			  this. busTimesMonFri = busTimesMonFri;
+
+		  }
+
+
+
+	  </script>
+
+      <script>
+          var bus1Content = "<h1>I am Bus1 content.</h1>"
+          var bus2Content = "<h1>I am Bus2 content.</h1>"
+          var bus3Content = "<h1>I am Bus3 content.</h1>"
+
+          //JQUERY
+          $(document).ready(function() {
+
+              //CHALLENGE: Write JQUERY code so that when buttons are clicked. It loads that buses content
+              //Hint: google "w3 jquery click() method" & "w3 jquery html() method"
+              //Extra Hint: this.id = the id of the button click
+
+              $("button").click(function(){
+				 $(".content").html(this.id + "MOM WHERE ARE MY TENDIES, REEEEEEE");
+				 });
+          });
+
+      </script>
+
+  </body>
+</html>

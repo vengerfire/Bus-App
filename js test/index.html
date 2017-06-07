@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS test</title>
+	<style>
+		select {
+			height: 50px;
+			font-size: 20px;
+			width: 50%;
+		}
+	
+	</style>
+</head>
+<body>
+	<h1>Please choose your Route my :p:</h1>
+	
+	<select id="routes" onchange="getRoute()">
+		<option value="" disabled selected>The suite life of coner and sigh </option>
+		<option value="Highbury">Highbury</option>
+		<option value="Rosyln">Roslyn</option>
+		<option value="Cloverlea">Cloverlea</option>
+	</select>
+	
+	<div id="content">
+		<h2>Select your route ni:p::p:a</h2>
+	
+	</div>
+	
+	<hr>
+	
+	<h1>You Have Selected your bus stop my :P:</h1>
+	
+	<h2>Please select a time my dude</h2>
+	
+	<h1>Select Times</h1>
+	<select id="departTime">
+	    <option value ="2">2.00</option>
+		<option value ="2.3">2.30</option>
+		<option value ="3">3.00</option>
+	</select>
+	
+	<h2>Please Select and ARRIVAL time</h2>
+	<select id="arrivalTime">
+	    <option value ="2.23">2.23</option>
+		<option value ="2.53">2.53</option>
+		<option value ="3.23">3.23</option>
+	</select>
+	
+	<button onclick="getTime()">Calculate Time</button>
+	
+	<div id="TimeContent">
+	    Time content here my :P:
+	</div>
+	
+	<script src="script.js"></script>
+	
+	
+	</body>
+</html>

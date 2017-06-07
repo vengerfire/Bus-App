@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <!--Google CDN hosted Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style type="text/css">
+      body {display:flex;}
+      .left, .right {width: 50%;}
+      .left {display:flex; flex-direction: column}
+      .right {text-align: center;}
+  </style>
+  </head>
+  <body>
+      
+      <!--Buttons-->
+      <div class="left">
+          <button id="Awapuni">Awapuni</button>
+          <button id="Roslyn">Roslyn</button>
+          <button id="Highbury">Highbury</button>
+      </div>
+      
+      <!--Content-->
+      <div class="right">
+        <div class="content">
+         <div class="name"></div>  
+         <div class="stops"></div>  
+         <div class="timesMonFri"></div>  
+         <div class="timesFriOnly"></div>  
+         <div class="timesSat"></div>  
+         <div class="timesSun"></div>       
+        </div>
+      </div>
+      
+      <script src="bus-stops-and-times-final.js"></script>
+      <script>
+          
+         function BusObject (name, stops, timesMonFri, timesFriOnly, timesSat, timesSun) = {
+            this.name = name;
+            this.stops = stops;
+            this.timesMonFri = timesMonFri;
+            this.timesFriOnly = timesFriOnly;
+            this.timesSat = timesSat;
+            this.timesSun = timesSun;
+         }
+
+var AwapuniBus = new BusObject("Awapuni", awapuniStops, awapuniTimesMonFri, awapuniTimesFriOnly, awapuniTimesSat, awapuniTimesSun)
+
+var RugbyBus = new BusObject("Rugby", rugbyStops, rugbyTimesMonFri, rugbyTimesFriOnly, rugbyTimesSat, rugbyTimesSun)
+
+var AwapuniBus = new BusObject("Awapuni", awapuniStops, awapuniTimesMonFri, awapuniTimesFriOnly, awapuniTimesSat, awapuniTimesSun)
+ function getStops(route) {
+	 var stops = "";
+	 for (var i = 0; i < route.length)
+ }         
+          //JQUERY 
+          $(document).ready(function() {
+                   
+              //CHALLENGE: Write JQUERY code so that when buttons are clicked. It loads that buses content
+              //Hint: google "w3 jquery click() method" & "w3 jquery html() method"
+              //Extra Hint: this.id = the id of the button click
+            
+            $("button").click(function(){
+                $(".name").html(this.id + "Bus".name);
+                $(".stops").html(this.id + "Bus".stops);
+                $(".timesMonFri").html(this.id + "Bus".timesMonFri);
+                $(".timesFriOnly").html(this.id + "Bus".timesFriOnly);
+                $(".timesSat").html(this.id + "Bus".timesSat);
+                $(".timesSun").html(this.id + "Bus".timesSun);
+            });
+              
+          });
+      
+      </script>
+  
+  </body>
+</html>
